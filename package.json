@@ -1,0 +1,33 @@
+{
+  "name": "shiny-svelte",
+  "version": "1.0.0",
+  "author": "StellarFX",
+  "keywords": ["r", "shiny", "svelte", "vite"],
+  "type": "module",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development concurrently \"yarn dev:ui\" \"yarn dev:shiny\"",
+    "dev:ui": "cross-env NODE_ENV=development vite",
+    "dev:shiny": "cross-env NODE_ENV=development nodemon --watch '**/*.R' --exec 'Rscript' global.R",
+    "build:ui": "vite build",
+    "preview": "Rscript global.R",
+    "preview:ui": "vite preview",
+    "check:ui": "svelte-check --tsconfig ./tsconfig.json && tsc -p tsconfig.node.json"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^5.0.0",
+    "@tsconfig/svelte": "^5.0.4",
+    "@types/node": "^22.10.2",
+    "concurrently": "^9.1.0",
+    "cross-env": "^7.0.3",
+    "nodemon": "^3.1.7",
+    "svelte": "^5.2.7",
+    "svelte-check": "^4.1.0",
+    "tslib": "^2.8.1",
+    "typescript": "~5.6.2",
+    "vite": "^6.0.1"
+  },
+  "dependencies": {
+    "@types/rstudio-shiny": "https://github.com/rstudio/shiny#v1.7.0"
+  },
+  "packageManager": "yarn@1.22.22"
+}
