@@ -8,8 +8,7 @@ export default defineConfig({
   ],
   build: {
     outDir: "dist",
-    assetsDir: "assets",
-    assetsInlineLimit: 51200
+    assetsDir: "assets"
   },
-  base: "/static/"
+  base: "/static/",
 })

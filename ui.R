@@ -6,6 +6,7 @@
 
 if(Sys.getenv("NODE_ENV") == "development") {
   # -------------------------------- Development ------------------------------- #
+  addResourcePath("static", ".")
   ui <- htmlTemplate(
     "index.html",
     head_scripts = tagList(
@@ -14,9 +15,7 @@ if(Sys.getenv("NODE_ENV") == "development") {
     footer_scripts = tagList(
       tags$script(src = "http://localhost:5173/static/@vite/client", type = "module"),
       tags$script(src = "http://localhost:5173/static/src/main.ts", type = "module"),
-      tags$style(type="text/css",
-                 "#shiny-disconnected-overlay {display: none;}"
-      )
+      tags$style(type="text/css", "#shiny-disconnected-overlay { display: none; }")
     )    
   )
 } else {
