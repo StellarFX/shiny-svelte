@@ -1,5 +1,6 @@
 <script lang="ts">
   import svelteLogo from "./assets/svelte.svg";
+  import shinyLogo from "./assets/shiny.svg";
   import viteLogo from "/vite.svg";
   import Counter from "./lib/Counter.svelte";
   import { setCounterReducer } from "./lib/CounterReducer.svelte";
@@ -9,6 +10,9 @@
 
 <main>
   <div>
+    <a href="https://shiny.posit.co" target="_blank" rel="noreferrer">
+      <img src={shinyLogo} class="logo shiny" alt="Shiny Logo" />
+    </a>
     <a href="https://vite.dev" target="_blank" rel="noreferrer">
       <img src={viteLogo} class="logo" alt="Vite Logo" />
     </a>
@@ -16,21 +20,13 @@
       <img src={svelteLogo} class="logo svelte" alt="Svelte Logo" />
     </a>
   </div>
-  <h1>Vite + Svelte</h1>
+  <h1>Shiny + Vite + Svelte</h1>
 
   <div class="card">
     <Counter />
   </div>
 
-  <p>
-    Check out <a
-      href="https://github.com/sveltejs/kit#readme"
-      target="_blank"
-      rel="noreferrer">SvelteKit</a
-    >, the official Svelte app framework powered by Vite!qsdqsdqsdqsdqsdqsdqs
-  </p>
-
-  <p class="read-the-docs">Click on the Vite and Svelte logos to learn more</p>
+  <p class="read-the-docs">Click on the Shiny, Vite and Svelte logos to learn more</p>
 </main>
 
 <style>
@@ -45,6 +41,9 @@
   }
   .logo.svelte:hover {
     filter: drop-shadow(0 0 2em #ff3e00aa);
+  }
+  .logo.shiny:hover {
+    filter: drop-shadow(0 0 2em #0088DAaa);
   }
   .read-the-docs {
     color: #888;

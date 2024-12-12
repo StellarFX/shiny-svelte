@@ -9,5 +9,5 @@
 </script>
 
 <button onclick={double}>
-  Click to double: {reducer.count}
+  Click to double using R: {reducer.count}
 </button>

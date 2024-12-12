@@ -5,7 +5,7 @@ class CounterReducer {
 
     constructor() {
         document.addEventListener('count.set', (event) => {
-            this.set((event as CustomEvent<number>).detail);
+            this.set(event.detail);
             console.log('count.set', this.#count);
         })
     }

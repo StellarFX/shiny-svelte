@@ -1,4 +1,3 @@
-addResourcePath("static", "dist")
 
 # ---------------------------------------------------------------------------- #
 #        This renders the correct index.html file based on the NODE_ENV         #
@@ -22,6 +21,7 @@ if(Sys.getenv("NODE_ENV") == "development") {
   )
 } else {
   # -------------------------------- Production -------------------------------- #
+  addResourcePath("static", "dist")
   ui <- htmlTemplate(
     "dist/index.html",
     head_scripts = tagList(
