@@ -94,7 +94,7 @@ yarn install
    This will start the UI and Shiny servers in parallel.
 
 2. Open the application in your browser:
-   - Shiny App: `http://localhost:7000`
+   - Shiny App: [`http://localhost:7000`](http://localhost:7000)
    - ~~Frontend: `http://localhost:5173`~~.
 
 3. Make changes to the Svelte components or R scripts, and the application will reload automatically.
