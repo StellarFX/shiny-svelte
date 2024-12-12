@@ -35,7 +35,7 @@ Clone the repository and install dependencies:
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-repo/shiny-svelte.git
+git clone https://github.com/StellarFX/shiny-svelte.git
 
 # Navigate into the project directory
 cd shiny-svelte
